@@ -49,17 +49,24 @@ Official World Bank indicators are used to demonstrate real-data sourcing, prove
 
 Case study: https://oluwajuwonade.vercel.app/case-studies/nigeria-public-data.html
 
-### 04–06 — Quantitative, financial & commercial analytics
+### 04 — Healthcare BI
+**Open Data Blend Healthcare Prescribing Dashboard**
+
+End-to-end healthcare analytics workflow using Open Data Blend/NHS prescribing evidence: CSV ingestion, SQLite staging, SQL cleaning, analytical views, Power BI semantic modelling and dashboard design.
+
+Repository project: https://github.com/oluwajuwonade/oluwajuwonade.github.io/tree/main/projects/healthcare-prescribing-dashboard
+
+### 05–07 — Quantitative, financial & commercial analytics
 - Credit Risk Analytics & FICO Segmentation
 - Financial Planning & Scenario Modelling
 - Pricing, Unit Economics & ROI Decision Engine
 
-### 07 — Analytics governance
+### 08 — Analytics governance
 **Data Quality & Analytics Assurance**
 
 Reusable controls for schema, missingness, duplicates, business rules, referential integrity, and KPI reconciliation.
 
-### 08 — AI evaluation specialization
+### 09 — AI evaluation specialization
 **AI Research & Evaluation Framework**
 
 Evaluation of accuracy, completeness, traceability, consistency, latency, cost, and failure patterns in AI-assisted research workflows.
@@ -99,7 +106,7 @@ Data Analyst · BI Analyst · Quantitative Analyst · Financial / FP&A Analyst �
 
 `docs/` is the browser-first portfolio layer deployed to Vercel. It contains the homepage, CV, case studies, assets, SQL proof, sitemap, and robots file.
 
-The linked project repositories contain deeper technical evidence, reproducible code, data-generation logic, tests, outputs, and methodological detail.
+The `projects/` directory contains deeper technical evidence, including the Open Data Blend healthcare prescribing dashboard.
 
 GitHub is the technical appendix. The portfolio website is the decision-context and recruiter/client evaluation layer.
 
