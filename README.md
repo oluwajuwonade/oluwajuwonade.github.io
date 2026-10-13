@@ -3,6 +3,7 @@
 I turn messy business, financial, and economic data into validated analysis, quantitative models, BI evidence, and decision-ready recommendations.
 
 **Live portfolio:** https://oluwajuwonade.vercel.app  
+**Project inquiry funnel:** https://oluwajuwonade.vercel.app/start-a-project.html  
 **Portfolio source:** `docs/` in this repository  
 **LinkedIn:** https://www.linkedin.com/in/oluwajuwonade  
 **Upwork:** https://www.upwork.com/freelancers/~01ae1602f502222784  
