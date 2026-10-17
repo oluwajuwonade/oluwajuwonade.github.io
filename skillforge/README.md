@@ -4,6 +4,9 @@ A mobile-first, static learning application for Data Analytics, AI, Economics, Q
 
 **Live site:** https://skillforge-learning-oluwajuwonade.vercel.app/
 
+## Brand system
+See [BRAND.md](./BRAND.md) for the palette and logo usage. Primary colors: Forge Teal `#00E5C4`, Deep Teal `#00B3A4`, Midnight Navy `#0B1320`, Clean Light `#F7FAFC`, and Signal Blue `#3F7CFF`.
+
 ## Included
 - 28-day practical learning challenge with objectives, examples, exercises, deliverables, and knowledge checks.
 - Four tracks: Data Analytics & BI, AI & Automation, Economics & Research, and Income & Client Acquisition.
