@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="17" fill="#79e2d1"/><path d="M43 17H28c-8 0-13 4-13 11 0 6 4 9 10 10l10 2c3 .6 4 1.7 4 4 0 2.7-2 4-6 4H16v7h18c9 0 14-4 14-12 0-6-4-9-11-10l-9-1.5c-3-.6-4-1.8-4-3.8 0-2.5 2-3.8 5-3.8h14z" fill="#111a2c"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+<title id="title">SkillForge geometric S icon</title>
+<rect width="64" height="64" rx="16" fill="#0B1320"/>
+<path d="M46 14H28L15 26V32L30 40H45V45L33 55H19L10 47" fill="none" stroke="#00E5C4" stroke-width="8" stroke-linecap="square" stroke-linejoin="bevel"/>
+<path d="M43 18H30L21 26" fill="none" stroke="#00B3A4" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="bevel"/>
+<path d="M37 40H45V45" fill="none" stroke="#3F7CFF" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="bevel"/>
+</svg>
