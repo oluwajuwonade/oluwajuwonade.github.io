@@ -47,7 +47,7 @@ def deck(title):
     p.core_properties.title=title; p.core_properties.author="Oluwajuwon Adediji"
     p.core_properties.subject="Executive presentation portfolio sample"; p.core_properties.keywords="business analysis; quantitative research; decision support"
     return p
-def cover(p,kicker,title,sub,side_head,metrics,out_name):
+def cover(p,kicker,title,sub,side_head,metrics):
     s=new(p); box(s,9.05,0,4.283,7.5,"panel","panel",False); box(s,9.05,0,.06,7.5,"mint","mint",False)
     t(s,kicker,.72,.62,7.7,.25,9.5,"mint",True); t(s,title,.72,1.18,7.9,1.95,32,"text",True)
     t(s,sub,.75,3.35,7.35,.74,15,"muted")
