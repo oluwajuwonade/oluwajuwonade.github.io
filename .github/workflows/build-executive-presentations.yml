@@ -1,0 +1,48 @@
+name: Build Executive Presentation Assets
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/generate_executive_presentations.py'
+      - '.github/workflows/build-executive-presentations.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out portfolio source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install generator
+        run: python -m pip install --upgrade pip python-pptx==1.0.2
+      - name: Install PDF export engine
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libreoffice-impress
+      - name: Generate editable presentations
+        run: |
+          mkdir -p docs/downloads/executive-presentations
+          PRESENTATION_OUT=docs/downloads/executive-presentations python tools/generate_executive_presentations.py
+      - name: Export matching PDFs
+        run: |
+          libreoffice --headless --convert-to pdf --outdir docs/downloads/executive-presentations docs/downloads/executive-presentations/*.pptx
+          test -s docs/downloads/executive-presentations/retail-sales-performance-diagnostic.pdf
+          test -s docs/downloads/executive-presentations/pricing-unit-economics-scenario-planning.pdf
+      - name: Commit the website assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/downloads/executive-presentations/*.pptx docs/downloads/executive-presentations/*.pdf
+          if git diff --cached --quiet; then
+            echo "Presentation assets are already current."
+          else
+            git commit -m "Build executive presentation download assets"
+            git push
+          fi
