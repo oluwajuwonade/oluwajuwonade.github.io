@@ -184,3 +184,27 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:28px 24px 42p
   .project-cta-actions{min-width:0}
   .project-footer{padding:22px 20px;flex-direction:column}
 }
+
+/* Executive presentation section and print-to-PDF support */
+.presentations-section{border-top:1px solid var(--line)}
+.presentations-detail-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.presentation-downloads{flex-wrap:wrap;align-items:center}
+.presentation-footer-panel{margin-top:22px}
+@media(max-width:760px){.presentations-detail-grid{grid-template-columns:1fr}}
+@media print {
+  body{background:#fff!important;color:#111!important}
+  .case-hero,footer,.case-actions,.presentation-footer-panel{display:none!important}
+  .case-main{max-width:none!important;margin:0!important;padding:0!important}
+  body[data-print-target] .case-main>p.case-kicker,
+  body[data-print-target] .case-main>h1,
+  body[data-print-target] .case-main>p.case-lede{display:none!important}
+  .presentations-detail-grid{display:block!important}
+  .presentations-detail-grid .case-panel{display:none!important;break-after:page;background:#fff!important;color:#111!important;border:0!important;box-shadow:none!important;padding:10mm!important;margin:0!important}
+  body[data-print-target="retail"] #retail,
+  body[data-print-target="pricing"] #pricing{display:block!important}
+  .case-panel h2,.case-panel h3,.case-panel p,.case-panel strong{color:#111!important}
+  .case-panel .takeaway-grid>div{border:1px solid #ccc!important;background:#fff!important}
+  .case-panel .takeaway-grid span,.case-panel .note{color:#444!important}
+  .case-grid{display:block!important}
+  @page{size:A4;margin:12mm}
+}
