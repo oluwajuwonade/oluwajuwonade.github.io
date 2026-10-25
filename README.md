@@ -72,6 +72,29 @@ Reusable controls for schema, missingness, duplicates, business rules, referenti
 
 Evaluation of accuracy, completeness, traceability, consistency, latency, cost, and failure patterns in AI-assisted research workflows.
 
+### 10 — Fraud / risk analytics
+**Fraud Risk Analytics**
+
+A synthetic transaction-risk prototype with chronological validation, validation-only threshold selection, and precision/recall plus false-positive reporting. It demonstrates method, not production fraud performance.
+
+Case study: https://oluwajuwonade.vercel.app/case-studies/fraud-risk-analytics.html  
+Source: https://github.com/oluwajuwonade/oluwajuwonade.github.io/tree/main/projects/fraud-risk-analytics
+
+### 11 — Nigeria economic intelligence
+**Nigeria Economic Intelligence Monitor**
+
+A source-traceable World Bank snapshot and reproducible API ingestion/analysis scripts. Indicator periods vary; the page distinguishes 2025 macro observations from 2024 development indicators.
+
+Case study: https://oluwajuwonade.vercel.app/case-studies/nigeria-public-data.html  
+Source: https://github.com/oluwajuwonade/oluwajuwonade.github.io/tree/main/projects/nigeria-economic-intelligence
+
+### 12 — Economics / statistics AI benchmark
+**AI Reasoning Benchmark**
+
+A starter question set with explicit answer types, numeric tolerances, deterministic scoring, and human review for open-ended items. Sample model responses are placeholders, not measured model performance.
+
+Source: https://github.com/oluwajuwonade/oluwajuwonade.github.io/tree/main/projects/ai-reasoning-benchmark
+
 ---
 
 ## Analytical operating model
