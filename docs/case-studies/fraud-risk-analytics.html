@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Fraud risk analytics case study: synthetic transaction data, chronological validation, precision-recall trade-offs, and model limitations.">
+<meta name="robots" content="index, follow"><meta name="theme-color" content="#0b0d10">
+<link rel="canonical" href="https://oluwajuwonade.vercel.app/case-studies/fraud-risk-analytics.html">
+<title>Evaluate fraud risk without hiding the false-positive trade-off | Oluwajuwon Adediji</title><link rel="stylesheet" href="../styles.css">
+</head><body>
+<header class="case-hero"><nav class="case-nav"><a class="back" href="../">← Back to portfolio</a></nav></header>
+<main class="case-main">
+<p class="case-kicker">FRAUD ANALYTICS · QUANTITATIVE RISK</p>
+<h1 class="case-title">Evaluate fraud risk without hiding the false-positive trade-off</h1>
+<p class="case-lede">A reproducible modelling prototype that generates fictional transaction data, learns a risk ranking, selects a decision threshold on validation data, and measures performance on a later holdout.</p>
+<div class="case-actions"><a class="button primary" href="https://github.com/oluwajuwonade/oluwajuwonade.github.io/tree/main/projects/fraud-risk-analytics">Open source code ↗</a><a class="button secondary" href="https://github.com/oluwajuwonade/oluwajuwonade.github.io/tree/main/projects/fraud-risk-analytics/README.md">Run instructions ↗</a></div>
+<div class="case-grid">
+<section class="case-panel case-wide"><div class="stat-grid"><div class="stat"><strong>12,000</strong><span>synthetic transactions in default demo</span></div><div class="stat"><strong>70 / 15 / 15</strong><span>chronological train / validation / test split</span></div><div class="stat"><strong>Validation</strong><span>threshold chosen before test scoring</span></div><div class="stat"><strong>PR-AUC</strong><span>reported alongside false-positive rate</span></div></div></section>
+<section class="case-panel"><h2>Decision problem</h2><p>Fraud review systems face a trade-off: a low threshold may find more suspicious activity but overwhelm reviewers, while a high threshold may reduce alerts and miss more fraud. Model evaluation should make this trade-off visible rather than optimizing overall accuracy alone.</p><h3>Workflow</h3><p>Synthetic transaction generation → chronological split → model fitting → validation threshold selection → holdout scoring → metrics export.</p></section>
+<section class="case-panel"><h2>Methods and metrics</h2><ul><li>Balanced logistic regression as a transparent baseline.</li><li>Temporal training, validation, and test partitions to reduce look-ahead risk.</li><li>Threshold selected on validation data, not on the final test set.</li><li>Average precision, ROC AUC, precision, recall, F1, false-positive rate, alert rate, and confusion counts.</li></ul></section>
+<section class="case-panel"><h2>Decision use</h2><p>The outputs show how to compare model ranking quality and the resulting review workload. A real deployment should set the operating threshold using fraud-loss and review-cost assumptions, then monitor stability and calibration over time.</p></section>
+<section class="case-panel"><h2>Reproducibility</h2><p>The source script builds the synthetic dataset from a fixed random seed and writes the holdout metrics and predictions to an output directory.</p><p>Install the listed requirements and run the command in the project README to repeat the analysis.</p></section>
+<section class="case-panel case-wide"><h2>Evidence boundary</h2><p><strong>All observations and labels in the demo are synthetic.</strong> The results validate the code path, not expected fraud detection in a bank or payment platform. There is no claim of production performance, client impact, or operational deployment. Before real use, the method would require a representative authorised dataset, leakage analysis, calibration, cost-sensitive thresholding, drift monitoring, and privacy/fairness review.</p><p><a class="text-link" href="https://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-f-measure-metrics">Scikit-learn model evaluation reference ↗</a></p></section>
+</div>
+</main>
+<footer><span>© Oluwajuwon Adediji</span><span>Data &amp; Quantitative Analyst · Evidence-led decision support</span><a href="../">Portfolio ↗</a></footer>
+</body></html>
