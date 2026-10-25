@@ -16,9 +16,9 @@ python projects/nigeria-economic-intelligence/src/analyze_macro.py --input proje
 
 ## Evidence included
 
-- data/nigeria_latest_indicator_snapshot.csv: curated latest-available values visible on official World Bank country/indicator pages, with source URL, reference year, and access date.
+- data/nigeria_latest_indicator_snapshot.csv: curated latest-available development indicators; data/world_bank_nigeria_2000_2025.csv: refreshed 2000–2025 annual API extract with source URLs and update metadata.
 - src/fetch_world_bank.py: repeatable API ingestion; writes retrieval timestamps and source URLs for each observation.
-- src/analyze_macro.py: coverage diagnostics, latest-value table, wide data, charts, and an executive brief.
+- src/analyze_macro.py: coverage diagnostics, latest-value table, wide data, per-indicator charts, and an executive brief. Published outputs include outputs/latest_available_indicators.csv, outputs/coverage_diagnostics.csv, outputs/executive_brief.md, and docs/assets/nigeria-macro-dashboard.svg.
 
 The latest-value snapshot is not a common-year panel: the indicator periods vary (2025 for inflation, GDP growth, and population; 2024 for electricity access and internet use). The full API extraction script is the route for historical time-series analysis. Snapshot values can be revised by publishers and should be refreshed before formal research publication.
 

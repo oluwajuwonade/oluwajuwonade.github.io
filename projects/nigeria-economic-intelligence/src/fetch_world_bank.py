@@ -17,7 +17,7 @@ INDICATORS = {
     "SL.UEM.TOTL.ZS": "Unemployment, total (% of total labor force) (modelled ILO estimate)",
     "FR.INR.RINR": "Real interest rate (%)",
     "NY.GDP.PCAP.KD.ZG": "GDP per capita growth (annual %)",
-    "NE.EXP.GNFS.ZS": "Exports of goods and services (% of GDP)",
+    "NV.IND.MANF.ZS": "Manufacturing, value added (% of GDP)",
     "BN.CAB.XOKA.GD.ZS": "Current account balance (% of GDP)",
 }
 

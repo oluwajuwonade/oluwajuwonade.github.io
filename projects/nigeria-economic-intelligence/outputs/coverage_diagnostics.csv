@@ -1,0 +1,9 @@
+indicator_code,indicator_name,requested_years,rows_returned,non_missing_values,missing_values,first_available_year,last_available_year,world_bank_source_updated
+FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",26,26,26,0,2000,2025,2026-10-08
+NY.GDP.MKTP.KD.ZG,GDP growth (annual %),26,26,26,0,2000,2025,2026-10-08
+PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",26,26,26,0,2000,2025,2026-10-08
+SL.UEM.TOTL.ZS,"Unemployment, total (% of total labour force) (modelled ILO estimate)",26,26,26,0,2000,2025,2026-10-08
+FR.INR.RINR,Real interest rate (%),26,26,26,0,2000,2025,2026-10-08
+NY.GDP.PCAP.KD.ZG,GDP per capita growth (annual %),26,26,26,0,2000,2025,2026-10-08
+BN.CAB.XOKA.GD.ZS,Current account balance (% of GDP),26,26,26,0,2000,2025,2026-10-08
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",26,26,26,0,2000,2025,2026-10-08

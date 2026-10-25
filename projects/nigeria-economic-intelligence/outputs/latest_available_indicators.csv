@@ -1,0 +1,9 @@
+indicator_code,indicator_name,latest_year,latest_value,display_unit,observations_in_2000_2025,source_url,world_bank_source_updated,retrieved_date_utc
+FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",2025,23.0101235833333,percent,26,https://api.worldbank.org/v2/country/NGA/indicator/FP.CPI.TOTL.ZG?format=json&date=2000:2025&per_page=1000,2026-10-08,2026-10-25
+NY.GDP.MKTP.KD.ZG,GDP growth (annual %),2025,4.01336180700973,percent,26,https://api.worldbank.org/v2/country/NGA/indicator/NY.GDP.MKTP.KD.ZG?format=json&date=2000:2025&per_page=1000,2026-10-08,2026-10-25
+PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",2025,1518.38094813367,"Nigerian naira per US dollar, annual average",26,https://api.worldbank.org/v2/country/NGA/indicator/PA.NUS.FCRF?format=json&date=2000:2025&per_page=1000,2026-10-08,2026-10-25
+SL.UEM.TOTL.ZS,"Unemployment, total (% of total labor force) (modeled ILO estimate)",2025,3.064,percent of labour force (modelled ILO estimate),26,https://api.worldbank.org/v2/country/NGA/indicator/SL.UEM.TOTL.ZS?format=json&date=2000:2025&per_page=1000,2026-10-08,2026-10-25
+FR.INR.RINR,Real interest rate (%),2025,4.03373069160163,percent,26,https://api.worldbank.org/v2/country/NGA/indicator/FR.INR.RINR?format=json&date=2000:2025&per_page=1000,2026-10-08,2026-10-25
+NY.GDP.PCAP.KD.ZG,GDP per capita growth (annual %),2025,1.89029058621935,percent,26,https://api.worldbank.org/v2/country/NGA/indicator/NY.GDP.PCAP.KD.ZG?format=json&date=2000:2025&per_page=1000,2026-10-08,2026-10-25
+BN.CAB.XOKA.GD.ZS,Current account balance (% of GDP),2025,4.82784315736378,percent of GDP,26,https://api.worldbank.org/v2/country/NGA/indicator/BN.CAB.XOKA.GD.ZS?format=json&date=2000:2025&per_page=1000,2026-10-08,2026-10-25
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2025,8.25747939801458,percent of GDP,26,https://api.worldbank.org/v2/country/NGA/indicator/NV.IND.MANF.ZS?format=json&date=2000:2025&per_page=1000,2026-10-08,2026-10-25
