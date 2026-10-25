@@ -1,0 +1,6 @@
+country,country_code,indicator_code,indicator_name,year,value,unit,source_url,accessed_date
+Nigeria,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",2025,23.0,percent,https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=NG,2026-10-25
+Nigeria,NGA,NY.GDP.MKTP.KD.ZG,"GDP growth (annual %)",2025,4.0,percent,https://data.worldbank.org/country/ng,2026-10-25
+Nigeria,NGA,SP.POP.TOTL,"Population total",2025,237527782,people,https://data.worldbank.org/country/ng,2026-10-25
+Nigeria,NGA,EG.ELC.ACCS.ZS,"Access to electricity (% of population)",2024,62.5,percent,https://data.worldbank.org/indicator/EG.ELC.ACCS.ZS?locations=NG,2026-10-25
+Nigeria,NGA,IT.NET.USER.ZS,"Individuals using the Internet (% of population)",2024,41.0,percent,https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=NG,2026-10-25
