@@ -1,6 +1,6 @@
 # Nigeria Economic Intelligence
 
-A reproducible World Bank Indicators API workflow for examining Nigeria's inflation, real GDP growth, official exchange rate, unemployment estimate, real interest rate, GDP-per-capita growth, exports, and current-account balance.
+A reproducible World Bank Indicators API workflow for examining Nigeria's inflation, real GDP growth, official exchange rate, modelled unemployment estimate, real interest rate, GDP-per-capita growth, current-account balance, and manufacturing value added.
 
 ## Run
 
@@ -18,9 +18,9 @@ python projects/nigeria-economic-intelligence/src/analyze_macro.py --input proje
 
 - data/nigeria_latest_indicator_snapshot.csv: curated latest-available development indicators; data/world_bank_nigeria_2000_2025.csv: refreshed 2000–2025 annual API extract with source URLs and update metadata.
 - src/fetch_world_bank.py: repeatable API ingestion; writes retrieval timestamps and source URLs for each observation.
-- src/analyze_macro.py: coverage diagnostics, latest-value table, wide data, per-indicator charts, and an executive brief. Published outputs include outputs/latest_available_indicators.csv, outputs/coverage_diagnostics.csv, outputs/executive_brief.md, and docs/assets/nigeria-macro-dashboard.svg.
+- src/analyze_macro.py: coverage diagnostics, latest-value table, wide data, per-indicator charts, and an executive brief. Published outputs include outputs/nigeria_indicators_wide.csv, outputs/latest_available_indicators.csv, outputs/coverage_diagnostics.csv, outputs/executive_brief.md, outputs/nigeria-macro-dashboard.svg, and docs/assets/nigeria-macro-dashboard.svg. The analysis script creates eight individual charts and a composite SVG/PNG dashboard; from the repository root it refreshes the website dashboard asset too.
 
-The latest-value snapshot is not a common-year panel: the indicator periods vary (2025 for inflation, GDP growth, and population; 2024 for electricity access and internet use). The full API extraction script is the route for historical time-series analysis. Snapshot values can be revised by publishers and should be refreshed before formal research publication.
+The committed historical extract contains eight fully populated annual series for 2000–2025. The separate latest-value development snapshot has mixed reference years (2025 for inflation, GDP growth, and population; 2024 for electricity access and internet use). Publishers may revise values, so refresh the data before formal research publication.
 
 ## Interpretation guardrails
 

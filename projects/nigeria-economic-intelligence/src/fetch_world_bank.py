@@ -21,6 +21,17 @@ INDICATORS = {
     "BN.CAB.XOKA.GD.ZS": "Current account balance (% of GDP)",
 }
 
+DISPLAY_UNITS = {
+    "FP.CPI.TOTL.ZG": "percent",
+    "NY.GDP.MKTP.KD.ZG": "percent",
+    "PA.NUS.FCRF": "Nigerian naira per US dollar, annual average",
+    "SL.UEM.TOTL.ZS": "percent of labour force (modelled ILO estimate)",
+    "FR.INR.RINR": "percent",
+    "NY.GDP.PCAP.KD.ZG": "percent",
+    "BN.CAB.XOKA.GD.ZS": "percent of GDP",
+    "NV.IND.MANF.ZS": "percent of GDP",
+}
+
 
 def fetch_indicator(code: str, start: int, end: int) -> list[dict]:
     url = f"{API_ROOT}/{code}"
@@ -34,6 +45,8 @@ def fetch_indicator(code: str, start: int, end: int) -> list[dict]:
     payload = response.json()
     if not isinstance(payload, list) or len(payload) < 2:
         raise ValueError(f"Unexpected World Bank API response for {code}")
+    api_metadata = payload[0] if isinstance(payload[0], dict) else {}
+    source_updated = api_metadata.get("lastupdated")
     retrieved = datetime.now(timezone.utc).isoformat()
     rows = []
     for item in payload[1] or []:
@@ -45,10 +58,13 @@ def fetch_indicator(code: str, start: int, end: int) -> list[dict]:
             "indicator_code": code,
             "indicator_name": item.get("indicator", {}).get("value") or INDICATORS[code],
             "value": float(raw) if raw is not None else None,
-            "unit": item.get("unit"),
-            "source_note": item.get("footnote"),
+            "unit": item.get("unit") or "",
+            "display_unit": DISPLAY_UNITS.get(code, ""),
+            "obs_status": item.get("obs_status") or "",
+            "source_note": item.get("footnote") or "",
             "retrieved_at_utc": retrieved,
             "source_url": response.url,
+            "world_bank_source_updated": source_updated,
         })
     return rows
 
