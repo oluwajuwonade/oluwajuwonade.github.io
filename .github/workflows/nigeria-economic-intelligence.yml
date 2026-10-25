@@ -1,0 +1,69 @@
+name: Nigeria Economic Intelligence validation
+
+on:
+  push:
+    paths:
+      - "projects/nigeria-economic-intelligence/**"
+      - ".github/workflows/nigeria-economic-intelligence.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-data-and-outputs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: projects/nigeria-economic-intelligence/requirements.txt
+
+      - name: Install project dependencies
+        run: python -m pip install --upgrade pip && pip install -r projects/nigeria-economic-intelligence/requirements.txt
+
+      - name: Compile analysis scripts
+        run: python -m py_compile projects/nigeria-economic-intelligence/src/fetch_world_bank.py projects/nigeria-economic-intelligence/src/analyze_macro.py
+
+      - name: Regenerate analysis outputs from committed source data
+        run: |
+          python projects/nigeria-economic-intelligence/src/analyze_macro.py \
+            --input projects/nigeria-economic-intelligence/data/world_bank_nigeria_2000_2025.csv \
+            --output /tmp/nigeria-economic-intelligence-outputs \
+            --website-dashboard /tmp/nigeria-economic-intelligence-dashboard.svg
+
+      - name: Validate dataset grain, coverage, and outputs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import pandas as pd
+
+          root = Path("projects/nigeria-economic-intelligence")
+          data = pd.read_csv(root / "data/world_bank_nigeria_2000_2025.csv")
+          assert len(data) == 208, f"Expected 208 rows; got {len(data)}"
+          assert data["indicator_code"].nunique() == 8, "Expected 8 indicator series"
+          assert data.groupby("indicator_code")["year"].nunique().eq(26).all(), "Each series must cover 2000–2025"
+          assert data.groupby("indicator_code")["value"].count().eq(26).all(), "Unexpected missing values in selected series"
+          assert data["year"].min() == 2000 and data["year"].max() == 2025
+          assert data["source_url"].notna().all(), "Every row needs a source URL"
+
+          out = Path("/tmp/nigeria-economic-intelligence-outputs")
+          latest = pd.read_csv(out / "latest_available_indicators.csv")
+          coverage = pd.read_csv(out / "coverage_diagnostics.csv")
+          wide = pd.read_csv(out / "nigeria_indicators_wide.csv")
+          assert len(latest) == 8, f"Expected 8 latest rows; got {len(latest)}"
+          assert len(coverage) == 8, f"Expected 8 coverage rows; got {len(coverage)}"
+          assert len(wide) == 26, f"Expected 26 annual wide rows; got {len(wide)}"
+          assert (coverage["missing_values"] == 0).all(), "Coverage report shows missing values"
+          assert (out / "executive_brief.md").stat().st_size > 500
+          assert (out / "nigeria-macro-dashboard.svg").stat().st_size > 2000
+          assert (out / "nigeria-macro-dashboard.png").stat().st_size > 5000
+          assert Path("/tmp/nigeria-economic-intelligence-dashboard.svg").stat().st_size > 2000
+          print("PASS: 208 observations, 8 complete annual series, and all analytical outputs generated.")
+          PY
