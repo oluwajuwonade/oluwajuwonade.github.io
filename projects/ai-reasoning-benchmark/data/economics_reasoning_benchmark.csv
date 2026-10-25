@@ -1,0 +1,11 @@
+question_id,domain,skill,question,answer_type,reference_answer,numeric_tolerance
+ECO001,Economics,percentage change,"A price rises from 80 to 100. What is the percentage increase?",numeric,25,0.01
+ECO002,Statistics,mean,"What is the arithmetic mean of 2, 4, and 6?",numeric,4,0.0001
+ECO003,Economics,opportunity cost,"What is the next-best alternative forgone called?",exact,opportunity cost,0
+ECO004,Statistics,correlation,"Does a correlation by itself prove causation?",exact,no,0
+ECO005,Economics,real versus nominal,"Real GDP is adjusted for what broad effect?",exact,price changes,0
+ECO006,Statistics,median,"What is the median of 1, 3, 8?",numeric,3,0.0001
+ECO007,Economics,elasticity,"If demand is elastic, is absolute price elasticity above or below 1?",exact,above 1,0
+ECO008,Quantitative reasoning,interpretation,"Explain why a model can have high accuracy but still be poor at detecting rare events.",manual_review,,0
+ECO009,Statistics,sampling,"Name one potential source of selection bias.",manual_review,,0
+ECO010,Economics,real returns,"In broad terms, what does a real interest rate adjust for?",exact,inflation,0
