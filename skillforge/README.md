@@ -5,9 +5,9 @@ A mobile-first, static learning application for Data Analytics, AI, Economics, Q
 **Live site:** https://skillforge-learning-oluwajuwonade.vercel.app/
 
 ## Brand system
-See [BRAND.md](./BRAND.md) for the palette and logo usage. Primary colors: Forge Teal `#00E5C4`, Deep Teal `#00B3A4`, Midnight Navy `#0B1320`, Clean Light `#F7FAFC`, and Signal Blue `#3F7CFF`.
+See [BRAND.md](./BRAND.md) for palette and logo usage. The logo-aligned palette uses Midnight Ink `#02021B`, Electric Cyan `#10D9F1`, Signal Blue `#389BFF`, Indigo `#6668FF`, and Violet `#A12BFF`. Interface text and links use accessible darker shades; progress indicators and brand highlights use the full cyan-to-violet gradient.
 
-The refreshed cap-and-rising-S mark is in `icon.svg`; the full horizontal wordmark is `logo-lockup.svg`.
+The cap-and-circuit-S mark is in `icon.svg`; the full horizontal wordmark is `logo-lockup.svg`.
 
 ## Included
 - 28-day practical learning challenge with objectives, examples, exercises, deliverables, and knowledge checks.
