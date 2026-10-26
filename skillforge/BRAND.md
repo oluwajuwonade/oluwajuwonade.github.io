@@ -1,25 +1,25 @@
 # SkillForge brand system
 
-## Core idea
-SkillForge helps learners turn knowledge into demonstrable capability: learn, build, apply.
+## Brand principle
+SkillForge connects practical learning with measurable skill development. The official symbol combines a graduation cap with a circuit-inspired S, using the same cyan-to-blue-to-violet progression throughout the identity.
 
-## Primary palette
-- **Forge Teal:** `#00E5C4` — primary actions, active states, key brand accent.
-- **Deep Teal:** `#00B3A4` — secondary accent and subtle logo detailing.
-- **Midnight Navy:** `#0B1320` — primary dark background, wordmark context and contrast.
-- **Clean Light:** `#F7FAFC` — light surfaces and text on dark backgrounds.
-- **Signal Blue:** `#3F7CFF` — links, data visualization accents and secondary actions.
+## Logo-aligned palette
+- **Midnight Ink** — `#02021B`: logo tile, primary dark surfaces, app/browser theme.
+- **Electric Cyan** — `#10D9F1`: brightest highlight and primary CTA start.
+- **Signal Blue** — `#389BFF`: core transition color and high-energy accent.
+- **Indigo** — `#6668FF`: central transition and secondary highlight.
+- **Violet** — `#A12BFF`: endpoint of the logo gradient and expressive accent.
+- **Accessible interface blue** — `#286FD6`: small links and text accents where contrast on light surfaces is required.
+- **Light surface** — `#F7F8FF`: calm app background that lets the logo colors stand out.
 
-## Icon
-The SkillForge mark is a geometric, angular S built as a simple vector. The refined mark uses a larger angular S path, a teal gradient, a light-teal inner facet, a blue forward detail, and a restrained lime spark. The midnight navy rounded-square tile anchors the symbol at small sizes.
+The official accent gradient runs from Electric Cyan through Signal Blue and Indigo to Violet. Primary call-to-action fills use the cyan-to-blue portion of the gradient with dark text for readability. Progress bars, learning completion indicators, and wordmark accents use the full gradient.
 
 ## Usage guidance
-- Keep the icon square and preserve its proportions.
-- Use the provided `icon.svg`; do not recreate the mark with a typed letter.
-- On dark surfaces, keep the complete icon tile visible.
-- Do not rotate the icon, add a second outline, or recolor it outside the palette.
-- Maintain clear space around the icon at least the width of one internal stroke.
-- Use the vector itself at native resolution rather than a screenshot.
+- Keep the logo icon square and preserve its proportions.
+- Use `icon.svg` for the app icon and `logo-lockup.svg` for the full wordmark.
+- Keep the icon's midnight background visible; do not redraw, rotate, outline, or recolor the official mark.
+- Use darker accessible color variants for small text rather than placing cyan or bright violet text directly on white.
+- Use pale blue and violet surface tints for cards and states; avoid introducing unrelated teal, lime, or amber accents.
 
 ## Accessibility
-Use the logo with the wordmark where the brand is not otherwise identified. Keep text/background contrast readable across the site.
+Maintain readable contrast for body text, links, controls, and status indicators. The bright brand colors are intended mainly for gradients, highlights, icons, and controls with an appropriate contrasting foreground.
