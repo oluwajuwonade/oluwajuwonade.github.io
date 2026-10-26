@@ -1,15 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 140" role="img" aria-labelledby="title desc">
-  <title id="title">SkillForge Learning</title>
-  <desc id="desc">SkillForge Learning brand lockup with a graduation-cap S mark and the words Learn, Build, Apply.</desc>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" role="img" aria-labelledby="title desc">
+  <title id="title">SkillForge</title>
+  <desc id="desc">Graduation-cap and circuit S mark, with the SkillForge wordmark and Learn Build Apply tagline.</desc>
   <defs>
-    <linearGradient id="forge-word" x1="218" y1="43" x2="366" y2="73" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#00B3A4"/>
-      <stop offset="1" stop-color="#00E5C4"/>
+    <linearGradient id="cap" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10D9F1"/><stop offset=".48" stop-color="#389BFF"/><stop offset="1" stop-color="#676BFF"/>
+    </linearGradient>
+    <linearGradient id="letter" x1=".2" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#4D9CFF"/><stop offset=".42" stop-color="#6668FF"/><stop offset="1" stop-color="#A12BFF"/>
+    </linearGradient>
+    <linearGradient id="word" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#28BFF2"/><stop offset="1" stop-color="#8C43FF"/>
     </linearGradient>
   </defs>
-  <image href="./icon.svg" x="7" y="6" width="128" height="128"/>
-  <text x="151" y="67" font-family="Inter, Arial, sans-serif" font-size="43" font-weight="800" letter-spacing="-1.3">
-    <tspan fill="#0B1320">Skill</tspan><tspan fill="url(#forge-word)">Forge</tspan>
-  </text>
-  <text x="155" y="100" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="750" letter-spacing="3.2" fill="#68788B">LEARN · BUILD · APPLY</text>
+  <rect x="0" y="0" width="220" height="220" rx="30" fill="#02021B"/>
+  <g transform="translate(1 2) scale(.568)">
+    <path d="M192 17 378 124 365 134 192 35 27 134 9 124Z" fill="url(#cap)"/>
+    <path d="M192 66 343 152 327 162 192 85 65 162 48 152Z" fill="url(#cap)"/>
+    <path d="M29 129 33 129 33 173 29 173Z" fill="url(#cap)"/>
+    <circle cx="31" cy="174" r="5.5" fill="#6878FF"/>
+    <path d="M27 178 35 178 41 199 21 199Z" fill="url(#letter)"/>
+    <path d="M83 176 192 116 300 176 300 218 283 208 283 188 192 138 100 189 100 220 300 333 300 347 192 369 83 329 83 287 100 297 100 316 192 354 283 327 83 222Z" fill="url(#letter)"/>
+    <path d="M172 193 288 253 288 275 211 300" fill="none" stroke="url(#letter)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="171" cy="193" r="16.5" fill="#6976FF"/>
+    <circle cx="211" cy="300" r="16.5" fill="#A33BFF"/>
+  </g>
+  <text x="260" y="107" font-family="Inter, Montserrat, Arial, sans-serif" font-size="66" font-weight="750" letter-spacing="-2"><tspan fill="#E8EEFF">Skill</tspan><tspan fill="url(#word)">Forge</tspan></text>
+  <text x="264" y="151" font-family="Inter, Montserrat, Arial, sans-serif" font-size="17" font-weight="650" letter-spacing="4.2" fill="#8FA4C6">LEARN · BUILD · APPLY</text>
 </svg>
