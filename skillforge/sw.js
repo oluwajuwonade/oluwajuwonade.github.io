@@ -1,6 +1,6 @@
-const CACHE='skillforge-v2';
+const CACHE='skillforge-v3';
 const BASE=new URL('./',self.registration.scope).pathname;
-const CORE=[BASE,BASE+'index.html',BASE+'manifest.webmanifest',BASE+'icon.svg'];
+const CORE=[BASE,BASE+'index.html',BASE+'manifest.webmanifest',BASE+'icon.svg',BASE+'logo-lockup.svg'];
 
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)).then(()=>self.skipWaiting()));
