@@ -1,7 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
-<title id="title">SkillForge geometric S icon</title>
-<rect width="64" height="64" rx="16" fill="#0B1320"/>
-<path d="M46 14H28L15 26V32L30 40H45V45L33 55H19L10 47" fill="none" stroke="#00E5C4" stroke-width="8" stroke-linecap="square" stroke-linejoin="bevel"/>
-<path d="M43 18H30L21 26" fill="none" stroke="#00B3A4" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="bevel"/>
-<path d="M37 40H45V45" fill="none" stroke="#3F7CFF" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="bevel"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">SkillForge brand mark</title>
+  <desc id="desc">A geometric S-shaped forge path in teal with a blue forward detail on a midnight navy rounded square.</desc>
+  <defs>
+    <linearGradient id="forge" x1="22" y1="24" x2="105" y2="105" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00E5C4"/>
+      <stop offset="1" stop-color="#00B3A4"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="78" y1="74" x2="108" y2="106" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#65A0FF"/>
+      <stop offset="1" stop-color="#3F7CFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="30" fill="#0B1320"/>
+  <path d="M94 27H56L29 51V63L61 81H95V91L69 109H37L18 92"
+    fill="none" stroke="url(#forge)" stroke-width="13" stroke-linecap="square" stroke-linejoin="bevel"/>
+  <path d="M87 35H59L41 51" fill="none" stroke="#8AF8E7" stroke-width="3.5" stroke-linecap="square" stroke-linejoin="bevel"/>
+  <path d="M77 81H95V91" fill="none" stroke="url(#signal)" stroke-width="4" stroke-linecap="square" stroke-linejoin="bevel"/>
+  <circle cx="100" cy="22" r="4" fill="#D8F56C"/>
 </svg>
