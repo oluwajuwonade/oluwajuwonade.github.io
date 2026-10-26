@@ -11,9 +11,11 @@ See [BRAND.md](./BRAND.md) for the palette and logo usage. Primary colors: Forge
 - 28-day practical learning challenge with objectives, examples, exercises, deliverables, and knowledge checks.
 - Four tracks: Data Analytics & BI, AI & Automation, Economics & Research, and Income & Client Acquisition.
 - Browser-local progress, saved lessons, quiz feedback, project milestones, and a quality checklist.
+- Built-in 25-minute focus timer with 5-minute and 15-minute break modes.
+- Local-calendar-aware learning streaks and a service worker that refreshes page content while preserving an offline fallback.
 - Transparent rule-based skill assessment.
 - JSON learning-record export and downloadable AI-study prompts.
-- Responsive UI and progressive-web-app manifest/service worker.
+- Responsive UI and installable progressive-web-app manifest/service worker.
 
 ## Run locally
 Open `index.html` in a browser. Core lessons and progress features work without a build step or API key. PWA functionality requires HTTPS or localhost.
