@@ -11,7 +11,7 @@ SkillForge helps learners turn knowledge into demonstrable capability: learn, bu
 - **Signal Blue:** `#3F7CFF` — links, data visualization accents and secondary actions.
 
 ## Icon
-The SkillForge mark is a geometric, angular S built as a simple vector. The navy tile anchors the mark, teal is the primary stroke, deep teal adds a secondary facet, and blue marks a small forward-facing detail.
+The SkillForge mark is a geometric, angular S built as a simple vector. The refined mark uses a larger angular S path, a teal gradient, a light-teal inner facet, a blue forward detail, and a restrained lime spark. The midnight navy rounded-square tile anchors the symbol at small sizes.
 
 ## Usage guidance
 - Keep the icon square and preserve its proportions.
