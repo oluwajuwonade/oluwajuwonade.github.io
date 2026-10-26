@@ -1,20 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
-  <title id="title">SkillForge brand mark</title>
-  <desc id="desc">A geometric S-shaped forge path in teal with a blue forward detail on a midnight navy rounded square.</desc>
+  <title id="title">SkillForge Learning mark</title>
+  <desc id="desc">A graduation cap above a rising S-shaped ribbon, representing practical learning and progress, on a midnight navy tile.</desc>
   <defs>
-    <linearGradient id="forge" x1="22" y1="24" x2="105" y2="105" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#00E5C4"/>
+    <linearGradient id="forge" x1="34" y1="91" x2="91" y2="34" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3F7CFF"/>
+      <stop offset=".5" stop-color="#00E5C4"/>
       <stop offset="1" stop-color="#00B3A4"/>
-    </linearGradient>
-    <linearGradient id="signal" x1="78" y1="74" x2="108" y2="106" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#65A0FF"/>
-      <stop offset="1" stop-color="#3F7CFF"/>
     </linearGradient>
   </defs>
   <rect width="128" height="128" rx="30" fill="#0B1320"/>
-  <path d="M94 27H56L29 51V63L61 81H95V91L69 109H37L18 92"
-    fill="none" stroke="url(#forge)" stroke-width="13" stroke-linecap="square" stroke-linejoin="bevel"/>
-  <path d="M87 35H59L41 51" fill="none" stroke="#8AF8E7" stroke-width="3.5" stroke-linecap="square" stroke-linejoin="bevel"/>
-  <path d="M77 81H95V91" fill="none" stroke="url(#signal)" stroke-width="4" stroke-linecap="square" stroke-linejoin="bevel"/>
-  <circle cx="100" cy="22" r="4" fill="#D8F56C"/>
+  <path d="M13 24.5 43 10 73 24.5 43 39Z" fill="#F7FAFC"/>
+  <path d="M24 30.5V41c10.5 7.3 27.5 7.3 38 0V30.5L43 40Z" fill="#DCE7EE"/>
+  <path d="M73 24.5V39" fill="none" stroke="#00E5C4" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="73" cy="42.5" r="3" fill="#00E5C4"/>
+  <path d="M37 82c8.5 8.3 21.8 10.1 33 4.1 12.4-6.7 12.7-18.7-.9-24.1l-9-3.7c-12.1-5-8.8-15.7 2.9-20.5 8.4-3.4 17.2-1.4 23.2 4.5" fill="none" stroke="url(#forge)" stroke-width="11.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M76.5 35.3 87.5 42.2 79 51.3" fill="none" stroke="#00E5C4" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
