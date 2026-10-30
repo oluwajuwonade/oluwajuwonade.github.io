@@ -17,7 +17,7 @@
       level:Object.fromEntries(ids.map(id=>[id,2])),
       counts:Object.fromEntries(ids.map(id=>[id,0])),
       correct:Object.fromEntries(ids.map(id=>[id,0])),
-      order:shuffled(ids,random),current:null,times:{},itemStartedAt:now
+      order:shuffled(ids,random),current:null,memoryUnlocked:false,times:{},itemStartedAt:now
     };
   }
 
@@ -32,6 +32,7 @@
     const nearest=pool.filter(q=>Math.abs(q.level-level)===distance);
     const pick=nearest[Math.min(nearest.length-1,Math.floor(Math.max(0,Math.min(0.999999,random()))*nearest.length))];
     state.itemStartedAt=Date.now();
+    state.memoryUnlocked=false;
     return pick||null;
   }
 
