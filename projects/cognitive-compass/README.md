@@ -1,34 +1,70 @@
 # Cognitive Compass
 
-Cognitive Compass is a free, browser-based cognitive assessment and development laboratory. It offers original educational tasks across eight cognitive domains, heuristic adaptive difficulty, raw-accuracy reporting, answer explanations, local attempt history and focused practice.
+Cognitive Compass is a free, browser-first cognitive assessment and development platform. It provides original educational reasoning tasks, an eight-domain performance profile, transparent heuristic routing, item-level explanations, a local progress dashboard and a practical development laboratory.
 
 ## Live application
 
 https://oluwajuwonade.vercel.app/projects/cognitive-compass/
 
-## Core experience
+## Assessment system
 
-- Eight domains: fluid reasoning, numerical reasoning, verbal reasoning, pattern recognition, working memory, processing speed, spatial reasoning and critical thinking.
-- 24-item assessment with three items per domain and adaptive difficulty routing.
-- Immediate answer submission and performance feedback through the final domain dashboard.
-- Domain-level raw accuracy, overall raw accuracy, descriptive strengths and development priorities.
-- Personal attempt history and print/save-as-PDF report.
-- Free development laboratory with original exercises, explanations and unlimited retries.
-- Responsive static application; no registration, payment, external scoring API or mandatory subscription.
-- Local browser storage for assessment session, history and practice completion.
+- **Eight domains:** fluid reasoning, numerical reasoning, verbal reasoning, pattern recognition, working memory, processing speed, spatial reasoning and critical thinking.
+- **80 original assessment items:** 10 items per domain.
+- **40 items per complete run:** five sampled in each domain.
+- **Adaptive routing:** each domain starts at target difficulty 2. A correct response raises the next target by one level; an incorrect response lowers it by one, bounded from 1 to 3. The next unused item closest to the target is selected. Ties are random.
+- **Scoring:** raw accuracy only; every domain contributes five items to a complete run. Difficulty does not change point weight.
+- **Memory interactions:** stimuli are hidden before answer choices appear, supporting a short self-paced recall task.
+- **Processing-speed items:** response-time summaries are descriptive and device-specific, not norm-referenced.
+- **Feedback:** assessment explanations and correct answers are available in the completed report.
 
-## Methodology and interpretation
+## Development laboratory
 
-Each item is scored 1 for the keyed answer and 0 otherwise. Overall raw accuracy is correct answers divided by attempted items. Domain raw accuracy is correct answers divided by attempted items in that domain. Domains are reported separately; there is no IQ conversion, age adjustment, norm-referenced standardisation or population percentile.
+- 16 original practice exercises across all eight domains.
+- Immediate answer feedback, explanations, unlimited retries and completion tracking.
+- Four structured practice pathways: reasoning foundations, quantitative clarity, memory and attention, and patterns and space.
+- Suggestions based on the lowest-scoring domain in the latest assessment run.
 
-Adaptive routing begins at target difficulty 2 within each domain. Correct answers raise the next target by one level; incorrect answers lower it by one level, bounded from 1 to 3. The next unused item closest to the target is selected. This is heuristic routing, not calibrated item-response theory.
+## Dashboard and privacy
 
-The item pool has not undergone representative norming, reliability studies, construct validation, criterion validation or independent psychometric review. This is an informal educational self-assessment, not a clinically validated IQ test or diagnostic instrument. Results must not be used for hiring, admissions, diagnosis or other high-stakes decisions. Processing-speed tasks and elapsed time are descriptive only; device latency, reading speed, interruptions and accessibility settings affect performance. Practice feedback supports task-specific learning and does not guarantee general cognitive transfer.
+- Eight-domain raw-accuracy profile and a historical performance chart.
+- Run-specific relative strength and development focus, with small-sample caveats.
+- Answer-by-answer review, printable report and local JSON export.
+- No account, subscription, payment flow or paywall.
+- Assessment and scoring run in the browser. Session, history and practice completion are stored in local storage on the current device.
+- Local data can be exported or cleared. It is not encrypted by the app and does not sync between devices.
+- No server-side scoring API or cloud profile is used.
 
-## Privacy
+## Architecture
 
-The core assessment runs in the browser. Assessment history, active session and practice completion are stored in local storage on the current device and do not synchronise across devices. No account or personal information is required. Users can clear local data within the app or through browser site settings. Hosting providers may process standard technical request logs.
+The application is static, dependency-light JavaScript with no framework or package installation required.
 
-## Technical structure
+- index.html — semantic application shell and script/style loading.
+- styles.css — design tokens, original navy/cyan interface and responsive/accessibility styles.
+- data.js — eight domain definitions, 80 assessment items and 16 practice exercises.
+- engine.js — adaptive selection, answer validation, score calculation and content-integrity checks.
+- app.js — app routes, assessment flow, local persistence, dashboard, reports, privacy controls and practice lab.
+- tests/assessment.test.mjs — deterministic assessment-engine tests.
 
-The app is a self-contained static HTML document with embedded CSS and JavaScript. No build step, dependency installation, database or environment variables are required. The Vercel-connected GitHub Pages-style portfolio repository deploys the `docs/` tree; the `projects/` copy is kept in sync for source consistency.
+The deployed static route is under docs/projects/cognitive-compass/. A mirror is maintained under projects/cognitive-compass/.
+
+## Test commands
+
+From the repository root:
+
+node --test projects/cognitive-compass/tests/assessment.test.mjs
+
+The test suite covers bank integrity, domain balance, complete 40-item selection, adaptive difficulty, raw scoring, memory stimuli and invalid responses.
+
+## Scoring methodology and limitations
+
+Each item contributes one point when the keyed response is selected and zero otherwise. Overall raw accuracy is correct answers divided by attempted items. Domain raw accuracy is correct responses divided by attempted items in that domain. A complete assessment has 40 questions and five questions per domain.
+
+The adaptive selector is a transparent heuristic, not an item-response-theory model or a calibrated computer-adaptive test. Difficulty labels are author-assigned. The item bank has not undergone representative norming, reliability analysis, construct or criterion validation, fairness/bias analysis, or independent psychometric review. Five items per domain is a small sample. The product does not produce IQ scores, population percentiles, diagnoses or high-stakes recommendations.
+
+The working-memory tasks are informal, self-paced hide-and-recall prompts. Processing-speed timing depends on the device, input method, reading speed and environment. Practice feedback supports task-specific learning and familiarity; the product does not claim that exercises increase IQ or cause broad transfer to general intelligence.
+
+Use Cognitive Compass for exploration, reflection and practice—not diagnosis, recruitment, admissions, school placement or other high-stakes decisions.
+
+## Hosting and persistence
+
+The app is deployed as static assets through the existing Vercel-connected repository. No database, account system, build command, environment variables or external scoring service is required. Local progress may be lost if browser site data is cleared, storage is unavailable or the user changes devices.
