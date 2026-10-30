@@ -1,33 +1,34 @@
 # Cognitive Compass
 
-Cognitive Compass is a free, browser-based educational reasoning assessment and practice centre. It is an independent project with original questions and no subscription, registration, payment flow, database, or external scoring API.
+Cognitive Compass is a free, browser-based cognitive assessment and development laboratory. It offers original educational tasks across eight cognitive domains, heuristic adaptive difficulty, raw-accuracy reporting, answer explanations, local attempt history and focused practice.
 
 ## Live application
 
-https://oluwajuwonade.github.io/projects/cognitive-compass/
+https://oluwajuwonade.vercel.app/projects/cognitive-compass/
 
-## Features
+## Core experience
 
-- 40-question timed assessment with four domains and 10 questions per domain.
-- Randomized answer-option ordering, question navigation, a countdown, and local progress persistence.
-- Automatically calculated overall raw accuracy and domain-level scores.
-- Answer-by-answer review with explanations.
-- Printable results report; choose **Save as PDF** in the browser print dialog.
-- 12 free practice exercises, instant feedback, filters, and locally stored completion progress.
-- Responsive interface with about, methodology, and privacy information.
+- Eight domains: fluid reasoning, numerical reasoning, verbal reasoning, pattern recognition, working memory, processing speed, spatial reasoning and critical thinking.
+- 24-item assessment with three items per domain and adaptive difficulty routing.
+- Immediate answer submission and performance feedback through the final domain dashboard.
+- Domain-level raw accuracy, overall raw accuracy, descriptive strengths and development priorities.
+- Personal attempt history and print/save-as-PDF report.
+- Free development laboratory with original exercises, explanations and unlimited retries.
+- Responsive static application; no registration, payment, external scoring API or mandatory subscription.
+- Local browser storage for assessment session, history and practice completion.
 
-## Use
+## Methodology and interpretation
 
-Open `index.html` in a current browser, or serve this directory with any static web server. No build step, package installation, environment variable, account, or API key is required.
+Each item is scored 1 for the keyed answer and 0 otherwise. Overall raw accuracy is correct answers divided by attempted items. Domain raw accuracy is correct answers divided by attempted items in that domain. Domains are reported separately; there is no IQ conversion, age adjustment, norm-referenced standardisation or population percentile.
 
-The app is self-contained: CSS and JavaScript are embedded in the HTML file. It can also be hosted as a static site.
+Adaptive routing begins at target difficulty 2 within each domain. Correct answers raise the next target by one level; incorrect answers lower it by one level, bounded from 1 to 3. The next unused item closest to the target is selected. This is heuristic routing, not calibrated item-response theory.
 
-## Data and privacy
+The item pool has not undergone representative norming, reliability studies, construct validation, criterion validation or independent psychometric review. This is an informal educational self-assessment, not a clinically validated IQ test or diagnostic instrument. Results must not be used for hiring, admissions, diagnosis or other high-stakes decisions. Processing-speed tasks and elapsed time are descriptive only; device latency, reading speed, interruptions and accessibility settings affect performance. Practice feedback supports task-specific learning and does not guarantee general cognitive transfer.
 
-Assessment calculations run in the browser. Where browser storage is available, progress and results are saved locally on that device. They are not synchronized between devices or browsers. Users can clear local progress from the app or browser settings.
+## Privacy
 
-## Scoring limitation
+The core assessment runs in the browser. Assessment history, active session and practice completion are stored in local storage on the current device and do not synchronise across devices. No account or personal information is required. Users can clear local data within the app or through browser site settings. Hosting providers may process standard technical request logs.
 
-The displayed **Reasoning Practice Score** is the percentage of questions answered correctly. It is not converted into an IQ score or population percentile. This informal exercise has not been presented as a clinically validated psychometric instrument and should not be used for diagnosis or high-stakes decisions.
+## Technical structure
 
-Cognitive Compass is independent and is not affiliated with or endorsed by myIQ or any testing organization.
+The app is a self-contained static HTML document with embedded CSS and JavaScript. No build step, dependency installation, database or environment variables are required. The Vercel-connected GitHub Pages-style portfolio repository deploys the `docs/` tree; the `projects/` copy is kept in sync for source consistency.
