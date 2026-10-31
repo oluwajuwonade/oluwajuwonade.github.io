@@ -1,4 +1,4 @@
-const CACHE='skillforge-v5';
+const CACHE='skillforge-v6';
 const BASE=new URL('./',self.registration.scope).pathname;
 const CORE=[BASE,BASE+'index.html',BASE+'manifest.webmanifest',BASE+'icon.svg',BASE+'logo-lockup.svg',BASE+'academy.js'];
 

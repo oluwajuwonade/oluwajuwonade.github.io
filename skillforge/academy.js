@@ -306,6 +306,15 @@ function setupView(){
     button.addEventListener('click',openAcademy);
     paths.insertAdjacentElement('afterend',button);
   }
+  const mobileNav=document.querySelector('.mobile-tabs');
+  if(mobileNav&&!mobileNav.querySelector('[data-view="academy"]')){
+    const mobileButton=document.createElement('button');
+    mobileButton.type='button';mobileButton.className='mobile-tab';mobileButton.dataset.view='academy';
+    mobileButton.innerHTML='<span>▤</span><span>Academy</span>';
+    mobileButton.setAttribute('aria-label','Open SkillForge Academy');
+    mobileButton.addEventListener('click',openAcademy);
+    mobileNav.appendChild(mobileButton);
+  }
   const section=document.createElement('section');
   section.id='view-academy';section.className='view';section.setAttribute('aria-labelledby','sf-academy-title');
   section.innerHTML='<div class="sf-academy-head"><div><div class="eyebrow">Structured learning environment</div><h1 id="sf-academy-title">SkillForge Academy</h1><p>Learn in sequence, practise with feedback, apply your knowledge and keep a record of the work you can show. Every core learning activity is free.</p></div><span class="sf-academy-stamp">Free-first · Local progress · v1.0 curriculum</span></div><div class="sf-kpis" id="sf-academy-kpis"></div><div class="sf-tabs" role="tablist" aria-label="Academy sections"><button class="sf-tab active" data-tab="explore" role="tab" aria-selected="true">Explore programmes</button><button class="sf-tab" data-tab="learning" role="tab" aria-selected="false">My learning</button><button class="sf-tab" data-tab="lab" role="tab" aria-selected="false">Learning lab</button><button class="sf-tab" data-tab="portfolio" role="tab" aria-selected="false">Project portfolio</button><button class="sf-tab" data-tab="competencies" role="tab" aria-selected="false">Competencies</button></div><div id="sf-academy-root" aria-live="polite"></div>';
