@@ -329,6 +329,13 @@ function setupView(){
     if(stats)stats.insertAdjacentElement('afterend',summary);else home.appendChild(summary);
     summary.querySelector('#sf-home-open').addEventListener('click',openAcademy);
   }
+  const academySection=document.getElementById('view-academy');
+  academySection.addEventListener('click',function(e){
+    const tab=e.target.closest('button[data-tab]');
+    if(!tab||tab.closest('#sf-academy-root'))return;
+    ui.tab=tab.dataset.tab;ui.program=null;ui.course=null;ui.lesson=null;ui.assessment=null;
+    renderAcademy();
+  });
   const root=document.getElementById('sf-academy-root');
   root.addEventListener('click',handleClick);
   root.addEventListener('input',handleInput);
