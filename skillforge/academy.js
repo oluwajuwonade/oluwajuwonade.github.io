@@ -367,7 +367,10 @@ function renderAcademy(){
   if(ui.course){root.innerHTML=renderCoursePage();renderFooterActions();return;}
   if(ui.program){root.innerHTML=renderProgramPage();renderFooterActions();return;}
   if(ui.tab==='learning')root.innerHTML=renderLearningPage();
-  else if(ui.tab==='lab')root.innerHTML=renderLabPage();
+  else if(ui.tab==='lab'){
+    root.innerHTML=renderLabPage();
+    calculateKpi();calculateElasticity();calculateRate();
+  }
   else if(ui.tab==='portfolio')root.innerHTML=renderPortfolioPage();
   else if(ui.tab==='competencies')root.innerHTML=renderCompetenciesPage();
   else root.innerHTML=renderExplorePage();
