@@ -1,5 +1,8 @@
 # Oluwajuwon Adediji — Data & Quantitative Analyst
 
+![Silver crown O brand emblem](docs/assets/logo.svg)
+
+
 I turn messy business, financial, and economic data into validated analysis, quantitative models, BI evidence, and decision-ready recommendations.
 
 **Live portfolio:** https://oluwajuwonade.vercel.app  
