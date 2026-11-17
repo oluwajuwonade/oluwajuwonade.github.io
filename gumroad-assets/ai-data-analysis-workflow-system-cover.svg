@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#050B15"/><stop offset=".52" stop-color="#0B1729"/><stop offset="1" stop-color="#121E30"/></linearGradient>
+ <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F1F4F8"/><stop offset=".5" stop-color="#AEBBCB"/><stop offset="1" stop-color="#E2E7ED"/></linearGradient>
+ <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse"><path d="M54 0H0V54" fill="none" stroke="#7890AA" stroke-opacity=".09" stroke-width="1"/></pattern>
+</defs>
+<rect width="1280" height="720" fill="url(#bg)"/><rect width="1280" height="720" fill="url(#grid)"/>
+<g fill="none" stroke="#93A8BF" stroke-opacity=".28" stroke-width="2"><path d="M0 560 C180 420 310 450 470 560 S800 680 1020 510 1230 370 1320 410"/><path d="M0 590 C180 450 310 480 470 590 S800 710 1020 540 1230 400 1320 440"/><path d="M0 620 C180 480 310 510 470 620 S800 740 1020 570 1230 430 1320 470"/></g>
+<g transform="translate(970 350)">
+ <circle r="180" fill="none" stroke="#D7E0EA" stroke-opacity=".14" stroke-width="18"/>
+ <circle r="155" fill="#07101D" fill-opacity=".42" stroke="url(#silver)" stroke-width="6"/>
+ <path d="M-87 -13 L-72 -67 L-8 -25 L0 -105 L10 -25 L73 -67 L88 -13 L75 47 L0 25 L-75 47 Z" fill="none" stroke="url(#silver)" stroke-width="10" stroke-linejoin="round"/>
+ <path d="M-110 54 C-72 20 -38 86 0 52 S75 20 112 54" fill="none" stroke="url(#silver)" stroke-width="8"/>
+ <path d="M-105 82 C-65 48 -34 112 0 80 S65 48 105 82" fill="none" stroke="#9EADBF" stroke-width="5"/>
+ <path d="M-90 108 C-50 78 -25 127 0 105 S50 78 90 108" fill="none" stroke="#70849B" stroke-width="3"/>
+ <text x="0" y="135" text-anchor="middle" fill="#C7CFDA" font-family="Georgia,serif" font-size="18" letter-spacing="6">AQUARIUS</text>
+</g>
+<g font-family="Georgia,'Times New Roman',serif">
+ <text x="72" y="155" fill="#C7CFDA" font-size="19" font-weight="bold" letter-spacing="5">PROFESSIONAL ANALYTICAL WORKFLOW</text>
+ <text x="72" y="270" fill="#F4F6F9" font-size="61" font-weight="bold">AI DATA ANALYSIS</text>
+ <text x="72" y="345" fill="#F4F6F9" font-size="61" font-weight="bold">WORKFLOW SYSTEM</text>
+ <path d="M72 390H590" stroke="url(#silver)" stroke-width="2"/>
+ <text x="72" y="445" fill="#C7CFDA" font-size="26">18 stages • 60 prompt cards</text>
+ <text x="72" y="490" fill="#AEBBCB" font-size="22">Analytical evaluation • Verification scorecard</text>
+ <text x="72" y="630" fill="#C7CFDA" font-size="18" letter-spacing="2">OLUWAJUWON ADEDIJI</text>
+ <text x="72" y="664" fill="#8FA2B9" font-size="15" letter-spacing="1.2">DATA &amp; QUANTITATIVE ANALYSIS  |  AI EVALUATION</text>
+</g></svg>
