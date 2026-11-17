@@ -10,7 +10,7 @@ I turn messy business, financial, and economic data into validated analysis, qua
 **Portfolio source:** `docs/` in this repository  
 **LinkedIn:** https://www.linkedin.com/in/oluwajuwonade  
 **Upwork:** https://www.upwork.com/freelancers/~01ae1602f502222784  
-**Contra:** https://contra.com/oluwajuwonade  
+**X:** https://x.com/oluwajuwon_ade  
 **GitHub:** https://github.com/oluwajuwonade
 
 ---
